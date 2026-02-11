@@ -1,14 +1,14 @@
 import React,{useState} from "react";
 import {View,Text,TextInput,Button,Alert} from "react-native";
-import {login} from "../services/firebaseService";
+import {signup} from "../services/firebaseService";
 
-export default function LoginScreen({navigation}:any){
+export default function SignupScreen({navigation}:any){
   const [email,setEmail]=useState("");
   const [pass,setPass]=useState("");
 
-  const handleLogin=async()=>{
+  const handleSignup=async()=>{
     try{
-      const res=await login(email,pass);
+      const res=await signup(email,pass);
       navigation.replace("Home",{user:res.user});
     }catch(e:any){
       Alert.alert("Error",e.message);
@@ -17,11 +17,10 @@ export default function LoginScreen({navigation}:any){
 
   return(
     <View style={{padding:20,gap:10}}>
-      <Text>Login</Text>
+      <Text>Signup</Text>
       <TextInput placeholder="Email" onChangeText={setEmail} style={{borderWidth:1,padding:8}}/>
       <TextInput placeholder="Password" secureTextEntry onChangeText={setPass} style={{borderWidth:1,padding:8}}/>
-      <Button title="Login" onPress={handleLogin}/>
-      <Button title="Signup" onPress={()=>navigation.navigate("Signup")}/>
+      <Button title="Create Account" onPress={handleSignup}/>
     </View>
   );
 }
