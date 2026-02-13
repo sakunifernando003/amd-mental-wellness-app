@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-export default function JournalScreen() {
+export default function GoalsScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Journal Screen</Text>
+      <Text style={styles.text}>Goals Screen</Text>
     </View>
   );
 }
