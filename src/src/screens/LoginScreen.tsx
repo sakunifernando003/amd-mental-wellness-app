@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, Alert } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet } from "react-native";
 import { login } from "../services/firebaseService";
 
 export default function LoginScreen({ navigation }: any) {
@@ -26,15 +26,18 @@ export default function LoginScreen({ navigation }: any) {
   };
 
   return (
-    <View style={{ padding: 20, gap: 12 }}>
-      <Text style={{ fontSize: 22, fontWeight: "bold" }}>Login</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome Back</Text>
+      <Text style={styles.subtitle}>Sign in to continue</Text>
 
       <TextInput
         placeholder="Email"
         value={email}
         onChangeText={setEmail}
         autoCapitalize="none"
-        style={{ borderWidth: 1, padding: 10 }}
+        keyboardType="email-address"
+        style={styles.input}
+        placeholderTextColor="#7f7f9a"
       />
 
       <TextInput
@@ -42,11 +45,75 @@ export default function LoginScreen({ navigation }: any) {
         value={pass}
         secureTextEntry
         onChangeText={setPass}
-        style={{ borderWidth: 1, padding: 10 }}
+        style={styles.input}
+        placeholderTextColor="#7f7f9a"
       />
 
-      <Button title="Login" onPress={handleLogin} />
-      <Button title="Signup" onPress={() => navigation.navigate("Signup")} />
+      <TouchableOpacity style={styles.button} onPress={handleLogin}>
+        <Text style={styles.buttonText}>Login</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
+        <Text style={styles.link}>Don't have an account? Sign Up</Text>
+      </TouchableOpacity>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#f8f6ff", // soft white-lavender
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 30
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: "bold",
+    color: "#5b3e96", // deep purple
+    marginBottom: 8
+  },
+  subtitle: {
+    fontSize: 16,
+    color: "#8c7aa9", // lighter lavender
+    marginBottom: 24
+  },
+  input: {
+    width: "100%",
+    backgroundColor: "#fff",
+    borderColor: "#d3c4f1",
+    borderWidth: 1,
+    borderRadius: 12,
+    padding: 14,
+    marginBottom: 16,
+    fontSize: 16,
+    shadowColor: "#000",
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    elevation: 2
+  },
+  button: {
+    width: "100%",
+    backgroundColor: "#6a4bdc",
+    padding: 16,
+    borderRadius: 12,
+    alignItems: "center",
+    marginTop: 8,
+    marginBottom: 12,
+    shadowColor: "#6a4bdc",
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 3
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "600"
+  },
+  link: {
+    color: "#5b3e96",
+    fontSize: 14,
+    marginTop: 8
+  }
+});
