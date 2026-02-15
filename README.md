@@ -1,6 +1,6 @@
 # mindEase-App 
 
-A mental wellness app designed to help users track their mood, journal thoughts, meditation guide and set personal goals — all in one place.
+A minimalistic mental wellness app designed to help users track their mood, journal thoughts, meditation guide and set personal goals — all in one place.
 
 # Features
 
@@ -20,7 +20,14 @@ Meditation - Aan pick any meditation guide you like
 
 # Screenshots
 
-Add your screenshots here to show off the UI.
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/0554feb9-f9cb-468c-8c3d-96e8e5a86fb1" />
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/f1b2bc2e-a7e5-4931-9f7d-6b550329ac75" />
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/08bb7ef1-6d43-4f12-814e-57356e3c4bb2" />
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/e7a5a0d6-cdee-406c-821e-76358f4b6f9e" />
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/2fdcb011-b403-4b94-bba0-e961f523df2b" />
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/1fb9ba24-b80d-4789-8b25-bc16c10855ba" />
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/0833a678-7c4c-4de8-8690-484e6ae7b464" />
+
 
 # Installation
 
