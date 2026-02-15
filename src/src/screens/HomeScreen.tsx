@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, Alert } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Alert, Image } from "react-native";
 import { getUserProfile } from "../services/firebaseService";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../navigation/AppNavigator";
@@ -27,28 +27,28 @@ export default function HomeScreen({ navigation, route }: Props) {
     {
       id: "1",
       title: "Journal",
-      subtitle: "Write your thoughts",
+      subtitle: "your thoughts",
       color: "#8c7aa9",
       navigate: () => navigation.navigate("Journal", { user }),
     },
     {
       id: "2",
       title: "Mood",
-      subtitle: "Track your feelings",
+      subtitle: "how you feel",
       color: "#6a4bdc",
       navigate: () => navigation.navigate("Mood", { user }),
     },
     {
       id: "3",
       title: "Meditation",
-      subtitle: "Relax & focus",
+      subtitle: "relax & focus",
       color: "#b49be1",
       navigate: () => navigation.navigate("Meditation"),
     },
     {
       id: "4",
       title: "Goals",
-      subtitle: "Set & achieve",
+      subtitle: "set & achieve",
       color: "#9c78d8",
       navigate: () => navigation.navigate("Goals", { user }),
     },
@@ -59,9 +59,16 @@ export default function HomeScreen({ navigation, route }: Props) {
       {/* Greeting */}
       <View style={styles.greetingCard}>
         <Text style={styles.greetingText}>
-          {isNew ? `Welcome ${username} 🌱` : `Hey, welcome back ${username} 👋`}
+          {isNew ? `Welcome ${username} 🌱` : `Welcome back ${username} 👋`}
         </Text>
       </View>
+
+      {/* App Logo */}
+      <Image
+        source={{ uri: "https://static.vecteezy.com/system/resources/previews/034/601/630/non_2x/ai-generated-meditation-free-png.png" }} // Replace with your logo URL or local asset
+        style={styles.logo}
+        resizeMode="contain"
+      />
 
       {/* Cards */}
       <View style={styles.cardContainer}>
@@ -101,6 +108,12 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "bold",
     color: "#6a4bdc",
+  },
+  logo: {
+    width: 150,
+    height: 150,
+    alignSelf: "center",
+    marginBottom: 20,
   },
   cardContainer: {
     flexDirection: "row",
