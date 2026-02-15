@@ -2,7 +2,7 @@
 
 A mental wellness app designed to help users track their mood, journal thoughts, meditation guide and set personal goals — all in one place.
 
-Features
+# Features
 
 Mood Tracker – Pick an emoji for your mood and save it in the calendar.
 
@@ -18,11 +18,11 @@ Media Support – Add images to journal entries using camera or gallery.
 
 Meditation - Aan pick any meditation guide you like
 
-Screenshots
+# Screenshots
 
 Add your screenshots here to show off the UI.
 
-Installation
+# Installation
 
 Clone the repo:
 
@@ -47,7 +47,7 @@ eas build --platform android
 
 Install on your device by scanning the QR code or using the generated APK/AAB.
 
-Technologies Used
+# Technologies Used
 
 React Native & Expo – Cross-platform mobile app framework
 
@@ -57,7 +57,7 @@ Expo Image Picker – For adding images to journal entries
 
 Expo Dev Client & EAS Build – For building and testing the app on devices
 
-Project Structure
+# Project Structure
 /assets       # Images, icons, splash screens
 /src/config   # Firebase congiguration
 /src/screens  # App screens (Mood, Journal, Goals, Signup/Login)
@@ -65,7 +65,7 @@ Project Structure
 /src/services # Firebase service functions
 /App.tsx      # App entry point
 
-Usage
+# Usage
 
 Signup/Login – Create an account or log in.
 
