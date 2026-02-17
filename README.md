@@ -84,4 +84,14 @@ Goals – Create, update, and remove personal goals.
 
 Calendar – Review moods over time.
 
+## 🚀 Live Build
+
+MindEase is available to try on Android.
+
+🔗 **Build Link:**  
+[https://expo.dev/accounts/sakunifernando/projects/mindEase-App/builds/c802f0e3-885d-4fec-8617-90a8c21c25b0]
+
+Scan or open the link on your phone to install.
+
+
 
